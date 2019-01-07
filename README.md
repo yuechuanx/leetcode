@@ -5,7 +5,7 @@ LeetCode solutions in C++ 11 and and Java and Python3.
 
 |NO.|Title|solution|Difficulty|Tag|
 |---|-----|----------|---|---|
-|0|[Two Sum](https://leetcode.com/problems/two-sum)|[Cpp](/Algorithms/C%2B%2B/1.%20Two%20Sum.cpp)|Easy|`Mapping`|
+|0|[Two Sum](https://leetcode.com/problems/two-sum)|[Cpp](/Algorithms/Cpp/1.%20Two%20Sum.cpp)|Easy|`Mapping`|
 |1|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers)||Medium|`LinkedList`|
 |3|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)||Hard||
 |4|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)||Medium||
