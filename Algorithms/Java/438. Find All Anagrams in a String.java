@@ -1,33 +1,33 @@
-// class Solution {
-//     public List<Integer> findAnagrams(String s, String p) {
-//         List<Integer> res = new ArrayList<>();
-//         // defensive
-//         if (s == null || s.length() == 0 || s.length() < p.length()) return res;    
+class Solution {
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> res = new ArrayList<>();
+        // defensive
+        if (s == null || s.length() == 0 || s.length() < p.length()) return res;    
         
-//         // build hash table to record p
-//         int[] hash = new int[256]; 
-//         for (char c : p.toCharArray()) {
-//             hash[c]++;
-//         }
+        // build hash table to record p
+        int[] hash = new int[256]; 
+        for (char c : p.toCharArray()) {
+            hash[c]++;
+        }
         
-//         int left = 0, right = 0, cnt = p.length();
-//         while (right < s.length()) {
-//             if (hash[s.charAt(right)] >= 1) {
-//                 hash[s.charAt(right)]--;
-//                 cnt--;
-//                 right++;
-//             }
-//             if (cnt == 0) res.add(left);
-//             if (right - left == p.length() && hash[s.charAt(left)] >= 0) {
-//                 cnt++;
-//                 left++;
-//                 hash[s.charAt(left)]++;
-//             }
-//         }
+        int left = 0, right = 0, cnt = p.length();
+        while (right < s.length()) {
+            if (hash[s.charAt(right)] >= 1) {
+                hash[s.charAt(right)]--;
+                right++;
+                cnt--;
+            }
+            if (cnt == 0) res.add(left);
+            if (right - left == p.length() && hash[s.charAt(left)] >= 0) {
+                hash[s.charAt(left)]++;
+                left++;
+                cnt++;
+            }
+        }
         
-//         return res;
-//     }
-// }
+        return res;
+    }
+}
 
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
