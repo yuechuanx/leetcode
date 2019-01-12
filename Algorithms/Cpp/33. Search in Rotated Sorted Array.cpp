@@ -6,11 +6,11 @@ public:
         
         while (start != end) {  // 下标可能在左右侧进行跳转，所以不能用<>进行判断
             const int mid = start + (end-start) / 2; // 为啥这里用const？
-            if (nums[mid] == target) {  // 最简单的一种情况
+            if (nums[mid] == target) {  
                 return mid;
             } 
-            if (nums[start] <= nums[mid]) { // 从start到mid处于有序状态，考虑了重复的元素？
-                if (nums[start] <= target && target < nums[mid]) // 如果target在此之间
+            if (nums[start] <= nums[mid]) { // 从start到mid处于有序状态，考虑重复的元素
+                if (nums[start] <= target && target < nums[mid]) // 如果target在[start..end]之间
                     end = mid;
                 else 
                     start = mid + 1;
