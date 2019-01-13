@@ -52,8 +52,7 @@ class Solution {
         } else {
             int[] res = new int[n];
             return res;
-        }
-]  
+        } 
     }
 }
 
