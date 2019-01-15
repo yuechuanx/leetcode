@@ -46,9 +46,8 @@ public List<List<Integer>> threeSum(int[] num) {
             while (lo < hi) {
                 if (num[lo] + num[hi] == sum) {
                     res.add(Arrays.asList(num[i], num[lo], num[hi]));
-                    while (lo < hi && num[lo] == num[lo+1]) lo++;
-                    while (lo < hi && num[hi] == num[hi-1]) hi--;
-                    lo++; hi--;
+                    do lo++; while (lo < hi && nums[lo] == nums[lo-1]);
+                    do hi--; while (lo < hi && nums[hi] == nums[hi+1]);
                 } else if (num[lo] + num[hi] < sum) lo++;
                 else hi--;
            }

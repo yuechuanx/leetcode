@@ -1,3 +1,4 @@
+// Merge Sort Solution
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] sorted = mergeSort(nums1, nums2);

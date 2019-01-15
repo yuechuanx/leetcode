@@ -45,3 +45,26 @@ class Solution {
         return res;
     }
 }
+
+class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int res = nums[0] + nums[1] + nums[nums.length - 1];
+        for (int i = 0; i < nums.length - 2; ++i) {
+            if (i == 0 || (i > 0 && nums[i] != nums[i-1])) {
+                int lo = i + 1, hi = nums.length - 1;
+                while (lo < hi) {
+                    int sum = nums[i] + nums[lo] + nums[hi];
+                    if (sum < target) 
+                        do lo++; while (lo < hi && nums[lo] == nums[lo-1]);
+                    else if (sum > target) 
+                        do hi--; while (lo < hi && nums[hi] == nums[hi+1]);
+                    else 
+                        return sum;
+                    res = (Math.abs(target-sum) < Math.abs(target-res)) ? sum : res;
+                } 
+            }
+        }   
+        return res;
+    }
+}
