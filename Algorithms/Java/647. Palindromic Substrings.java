@@ -2,7 +2,6 @@ class Solution {
     public int countSubstrings(String s) {
         if (s.length() <= 1) return s.length();
         
-        int cnt = s.length();
         for (int step = 1; step < s.length(); step++) {
             for (int i = 0; i < s.length() - step; ++i) {
                 int left = i, right = left + step;
