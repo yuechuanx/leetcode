@@ -1,3 +1,4 @@
+// Brute-Force: original implement 
 class Solution {
     public int countSubstrings(String s) {
         if (s.length() <= 1) return s.length();
