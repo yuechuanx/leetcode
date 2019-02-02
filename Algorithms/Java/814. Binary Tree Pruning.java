@@ -7,6 +7,8 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+ // best solution   
 class Solution {
     public TreeNode pruneTree(TreeNode root) {
         if (root == null) return root;

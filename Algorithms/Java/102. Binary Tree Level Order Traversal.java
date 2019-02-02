@@ -35,7 +35,6 @@ class Solution {
                     res.add(levelNode);
                 }
             }
-
         }
         
         return res;
