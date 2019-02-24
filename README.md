@@ -5,10 +5,10 @@ LeetCode solutions in C++ 11 and and Java and Python3.
 
 |NO.|Title|solution|Difficulty|Tag|
 |---|-----|----------|---|---|
-|1|[Two Sum](https://leetcode.com/problems/two-sum)|[Cpp](/Algorithms/Cpp/1.%20Two%20Sum.cpp)|Easy|`Mapping`|
+|1|[Two Sum](https://leetcode.com/problems/two-sum)|[Cpp](/Algorithms/Cpp/P1-Two-Sum.cpp)|Easy|`Mapping`|
 |2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers)||Medium|`LinkedList`|
 |3|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)||Hard||
-|4|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)||Medium||
+|4|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)|[Cpp](/Algorithms/Cpp/P4-Median-of-Two-Sorted-Arrays.cpp)|Medium||
 |5|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion)||Medium||
 |6|[Reverse Integer](https://leetcode.com/problems/reverse-integer)||Easy||
 |7|[String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi)||Medium||
