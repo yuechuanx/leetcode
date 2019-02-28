@@ -46,6 +46,14 @@ class Solution {
     }
 }
 
+/**
+ * best solution    
+ * 
+ * 125 / 125 test cases passed.
+ * Status: Accepted
+ * Runtime: 8 ms
+ * Memory Usage: 39 MB
+ */
 class Solution {
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);

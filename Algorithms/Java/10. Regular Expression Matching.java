@@ -36,9 +36,14 @@ class Solution {
     }
 }
 
-/**
- *  递归解法
+
+/** 
+ * 递归解法
  * 
+ * 447 / 447 test cases passed.
+ * Status: Accepted
+ * Runtime: 65 ms
+ * Memory Usage: 42.9 MB
  */
 class Solution {
     public boolean isMatch(String text, String pattern) {
