@@ -1,3 +1,9 @@
+/* 
+ * 24 / 24 test cases passed.
+ * Status: Accepted
+ * Runtime: 13 ms
+ * Memory Usage: 34.2 MB
+ */ 
 class Solution {
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {
@@ -39,3 +45,46 @@ class Solution {
         return len;
     }
 }
+
+/**
+ * Not pass. 
+ * 
+ */
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        if (nums == null || nums.length == 0 || nums.length == 1) {
+            return nums.length;
+        }
+        /* 初始化 dp，ends */
+        int[] dp = new int[nums.length];  // dp[i] 表示 nums[0...i] 时 LIS 的长度
+        int[] ends = new int[nums.length];  // ends[i] 表示长度为 i 时，最小结尾数的值
+        dp[0] = 1;
+        ends[0] = dp[0];
+        
+        /* 更新 dp，ends 数组 */ 
+        int l = 0, m = 0, r = 0;
+        int len = 0;  // LIS 的长度
+        for (int i = 1; i < nums.length; ++i) {
+            l = 0;
+            r = len;
+            /* 二分法，找到 nums[i] 在 ends 中的插入位置 */
+            while (l <= r) {  
+                m = (l + r) / 2;  
+                if (nums[i] > ends[m]) {
+                    l = m + 1;
+                } else {
+                    r = m - 1;
+                }
+            }  // END-WHILE
+            len = Math.max(len, l);
+            ends[l] = nums[i];
+            dp[i] = l + 1;
+        }
+        
+        /* 通过 dp，ends 数组构建序列 */
+        // todo
+        
+        return dp[nums.length - 1];
+    }
+}
+
