@@ -7,8 +7,26 @@
  * }
  */
 
- // first version
-class Solution {
+class Solution {  // recursion
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        if (l1 == null && l2 == null) return null;
+        
+        /* 计算当前节点的值 */
+        int val = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val);
+        ListNode head = new ListNode(val % 10);
+        
+        /* 计算下一个节点的值 */
+        head.next = addTwoNumbers(l1 == null ? null : l1.next, 
+                                  l2 == null ? null : l2.next);
+        if (val >= 10) {  // 如果当前节点有进位，下一节点值 + 1
+            head.next = addTwoNumbers(head.next, new ListNode(1));
+        }
+        
+        return head;
+    }
+}
+
+class Solution {  // non-recursion
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1, q = l2, curr = dummyHead;
@@ -31,12 +49,12 @@ class Solution {
     }
 }
 
-// second version, not use ListNode p, q
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode curr = dummyHead;
         int carry = 0;
+        
         while (l1 != null || l2 != null) {
             int x = (l1 != null) ? l1.val : 0;
             int y = (l2 != null) ? l2.val : 0;
@@ -47,28 +65,12 @@ class Solution {
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
         }
+        
         if (carry > 0) {
             curr.next = new ListNode(carry);
         }
+        
         return dummyHead.next;
     }
 }
 
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        if (l1 == null && l2 == null) return null;
-        
-        /* 计算当前节点的值 */
-        int val = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val);
-        ListNode head = new ListNode(val % 10);
-        
-        /* 计算下一个节点的值 */
-        head.next = addTwoNumbers(l1 == null ? null : l1.next, 
-                                  l2 == null ? null : l2.next);
-        if (val >= 10) {  // 如果当前节点有进位，下一节点值 + 1
-            head.next = addTwoNumbers(head.next, new ListNode(1));
-        }
-        
-        return head;
-    }
-}
