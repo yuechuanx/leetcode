@@ -1,0 +1,10 @@
+#!/bin/zsh
+cd Cpp
+rename 's|^(\d+)[. ]+(.*)|P$1 $2|; s| |-|g' *cpp
+cd ..
+cd Java
+rename 's|^(\d+)[. ]+(.*)|P$1 $2|; s| |-|g' *java
+cd ..
+cd Python3
+rename 's|^(\d+)[. ]+(.*)|P$1 $2|; s| |-|g' *py
+cd ..

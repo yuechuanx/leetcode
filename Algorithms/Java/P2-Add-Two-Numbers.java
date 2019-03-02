@@ -54,14 +54,21 @@ class Solution {
     }
 }
 
-// todo: Recursion
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) return null;
+        
+        /* 计算当前节点的值 */
         int val = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val);
         ListNode head = new ListNode(val % 10);
-        head.next = addTwoNumbers(l1 == null ? null : l1.next, l2 == null ? null : l2.next);
-        if (val >= 10) head.next = addTwoNumbers(head.next, new ListNode(1));
+        
+        /* 计算下一个节点的值 */
+        head.next = addTwoNumbers(l1 == null ? null : l1.next, 
+                                  l2 == null ? null : l2.next);
+        if (val >= 10) {  // 如果当前节点有进位，下一节点值 + 1
+            head.next = addTwoNumbers(head.next, new ListNode(1));
+        }
+        
         return head;
     }
 }
