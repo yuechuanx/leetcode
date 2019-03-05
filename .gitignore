@@ -8,3 +8,5 @@ Algorithms/.DS_Store
 
 # special files
 Algorithms/rename.sh
+Algorithms/[0-9].*.java
+
