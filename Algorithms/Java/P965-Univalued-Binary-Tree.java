@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+
+import javax.swing.tree.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -8,19 +12,23 @@
  * }
  */
 
- // wrong solution, fix it.
-class Solution {
+
+ class Solution {
     public boolean isUnivalTree(TreeNode root) {
-        if (root == null) return true;
-        return traverse(root, root.val);
+        int val = root.val;
+        
+        return dfs(root, val);
     }
     
-    // it's wrong, because it will traverse the left-bottom node.
-    private boolean traverse(TreeNode node, int val) {
-        if (node.left != null) return traverse(node.left, val);
-        else if (node.right != null) return traverse(node.right, val);
-        else 
-            return node.val == val ? true : false;
+    private boolean dfs(TreeNode node, int val) {
+        if (node == null) {
+            return true;
+        }
+        if (node.val != val) {
+            return false;
+        }
+        
+        return dfs(node.left, val) && dfs(node.right, val);
     }
 }
 

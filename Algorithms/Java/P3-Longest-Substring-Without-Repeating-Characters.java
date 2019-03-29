@@ -1,3 +1,8 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         Map<Character, Integer> m = new HashMap();
@@ -5,7 +10,8 @@ class Solution {
         char[] strs = s.toCharArray();
         
         for (int i = 0; i <s.length(); ++i) {
-            if (m.containsKey(strs[i]) && i >= start) {  // 出现重复字符时刷新起始下标
+            if (m.containsKey(strs[i]) && i >= start) {
+                // 出现重复字符且在计数范围内, 刷新起始下标
                 start = m.get(strs[i]) + 1;
             } else {
                 longest = Math.max(longest, i - start + 1);

@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Stack;
+
 /*
 // Definition for a Node.
 class Node {
@@ -28,6 +32,24 @@ class Solution {
         }
         
         Collections.reverse(res);
+        return res;
+    }
+}
+
+class Solution {
+    
+    List<Integer> res = new ArrayList();
+    
+    public List<Integer> postorder(Node root) {
+        if (root == null) {
+            return res;
+        }
+        
+        for (Node node : root.children) {
+            postorder(node);
+        }
+        res.add(root.val);
+        
         return res;
     }
 }

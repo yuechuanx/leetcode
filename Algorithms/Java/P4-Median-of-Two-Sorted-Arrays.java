@@ -13,7 +13,6 @@ class Solution {
     public int[] mergeSort(int[] nums1, int[] nums2) {
         int m = nums1.length, n = nums2.length;
         int total = m + n;
-        
         int[] res = new int[total];
         int i = 0, j = 0, k = 0;
         
@@ -23,8 +22,7 @@ class Solution {
         
         for (; i < m; ++i) {
             res[k++] = nums1[i];
-        }
-        
+        }       
         for (; j < n; ++j) {
             res[k++] = nums2[j];
         }
@@ -39,10 +37,11 @@ class Solution {
     public double findMedianSortedArrays(int[] A, int[] B) {
         int m = A.length;
         int n = B.length;
+
         if (m > n) { // to ensure m<=n
-            int[] temp = A; A = B; B = temp;
-            int tmp = m; m = n; n = tmp;
+            return findMedianSortedArrays(B, A);
         }
+        
         int iMin = 0, iMax = m, halfLen = (m + n + 1) / 2;
         while (iMin <= iMax) {
             int i = (iMin + iMax) / 2;
