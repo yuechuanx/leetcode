@@ -6,8 +6,7 @@ LeetCode solutions in C++ 11 and and Java and Python3.
 |NO.|Title|solution|Difficulty|Tag|
 |---|-----|----------|---|---|
 |1|[Two Sum](https://leetcode.com/problems/two-sum)|[Cpp](/Algorithms/Cpp/p1-two-sum.cpp) [Java](/Algorithms/Java/p1-two-sum.java) [Python3](/Algorithms/Python3/p1-two-sum.py)|Easy|`Mapping`|
-|2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers)|
-[Cpp](/Algorithms/Cpp/p2-add-two-numbers.cpp) [Java](/Algorithms/Java/p2-add-two-numbers.java) [Python3](/Algorithms/Python3/p2-add-two-numbers.py)|Medium|`LinkedList`|
+|2|[Add Two Numbers](https://leetcode.com/problems/add-two-numbers)| [Cpp](/Algorithms/Cpp/p2-add-two-numbers.cpp) [Java](/Algorithms/Java/p2-add-two-numbers.java) [Python3](/Algorithms/Python3/p2-add-two-numbers.py)|Medium|`LinkedList`|
 |3|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)||Hard||
 |4|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)|[Cpp](/Algorithms/Cpp/P4-Median-of-Two-Sorted-Arrays.cpp)|Medium||
 |5|[ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion)||Medium||
