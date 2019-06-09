@@ -7,7 +7,9 @@ Algorithms/.DS_Store
 .DS_Store
 
 # special files
-Algorithms/rename.sh
+Algorithms/rename-leetcode
 Algorithms/[0-9]*.java
 /[0-9]*.java
+/[0-9]*.py
+
 
