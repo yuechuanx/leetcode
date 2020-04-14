@@ -1,15 +1,12 @@
-# .vs folder
 .vscode/
-Algorithms/Cpp/.vs/
 
-# macOS .DS_Store
-Algorithms/.DS_Store
-.DS_Store
+**/.DS_Store
 
-# special files
-Algorithms/rename-leetcode
-Algorithms/[0-9]*.java
-/[0-9]*.java
-/[0-9]*.py
+
+**/[0-9]*.java
+**/[0-9]*.py
+
+rename.sh
+test.py
 
 
