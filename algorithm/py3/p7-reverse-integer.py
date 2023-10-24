@@ -16,4 +16,3 @@ class Solution:
             return 0
         
         return res if not negative else -res
-            

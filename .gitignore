@@ -1,3 +1,4 @@
+.idea/
 .vscode/
 
 **/.DS_Store
@@ -5,8 +6,7 @@
 
 **/[0-9]*.java
 **/[0-9]*.py
+**/[0-9]*.cpp
 
-rename.sh
-test.py
 
 
